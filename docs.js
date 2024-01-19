@@ -89,12 +89,9 @@ gulp.task("imgDocs", () => {
   return gulp
     .src("./src/img/**/**")
     .pipe(change("./docs/img/"))
-    .pipe(webp())
+    .pipe(webp()) 
     .pipe(gulp.dest("./docs/img/"))
-
-    .src("./src/img/**/**")
-    .pipe(change("./docs/img/"))
-    .pipe(minImg({ verbose: true }))
+    .pipe(minImg({ verbose: true })) 
     .pipe(gulp.dest("./docs/img/"));
 });
 
